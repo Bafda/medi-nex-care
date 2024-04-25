@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/logo.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta
+      name="description"
+      content="Web site created using create-react-app"
+    />
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo.png" />
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="icon" href="logo.png">
+  <style>
+    /* Custom styles */
+    .navbar-brand-text {
+      margin-left: 10px;
+      font-size: 20px;
+      font-weight: bold;
+    }
+    .navbar-brand img {
+      height: 50px;
+      width: auto;
+    }
+    .search-form {
+      display: flex;
+      align-items: center;
+    }
+    .profile-photo {
+      height: 30px;
+      width: 30px;
+      border-radius: 50%;
+      margin-left: 10px;
+    }
+    @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap");
+
+    body {
+      font-family: "Poppins", sans-serif !important;
+    }
+
+    .headline {
+      left: 130px;
+    } 
+    .clipped {
+      clip-path: polygon(50% 0, 100% 0, 100% 100%, 0% 100%);
+    }
+    @media screen and (max-width: 650px){
+      .headline {
+        left: 20px;
+      } 
+      .clipped {
+        clip-path: none;
+        max-height: 300px !important;
+      }
+    }
+
+.slideIn{
+  animation: slideInAnimation 2s ease forwards;
+}
+
+/* Define animation keyframes */
+@keyframes slideInAnimation {
+  0% {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+    /* Custom color styles */
+    .bg-custom {
+      background-color: #9B5DE5;
+      color: #fff;
+    }
+    .btn-custom {
+      background-color: #9B5DE5;
+      border-color: #9B5DE5;
+    }
+    .btn-custom:hover {
+      background-color: #873ac7;
+      border-color: #873ac7;
+    }
+    .list-group-item {
+      background-color: #f0f0f0;
+    }
+  </style>
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+    <nav class="navbar navbar-expand-md navbar-light bg-light slideIn">
+      <a class="navbar-brand" href="#">
+        <img src="logo.png" alt="Brand Logo">
+        <span class="navbar-brand-text">Med Nex Care</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav mr-auto">
+        </ul>
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Explore
+            </a>
+             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="mride.html">MedRide</a>
+              <a class="dropdown-item" href="measy.html">Medeasy</a>
+              <a class="dropdown-item" href="mshop.html">Medshop</a>
+             </div>
+          </li>
+          <li class="nav-item">
+            <form class="form-inline search-form">
+              <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-warning my-2 my-sm-0" type="submit">Search</button>
+            </form>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="signup.html">Sign In</a>
+          </li>
+          <li class="nav-item">
+            <img src="profile.jpg" alt="Profile Photo" class="profile-photo">
+          </li>
+        </ul>
+      </div>
+    </nav>
+    
+    
+    <div class="d-sm-flex align-items-center justify-content-between w-100" style="height: 100vh;">
+      <div class="col-md-4 mx-auto mb-4 mb-sm-0 headline slideIn" >
+        <span class="text-secondary text-uppercase">Streamline Healthcare Access</span>
+        <h1 class="display-4 my-4 font-weight-bold">Book Your <span id="text" style="color: #9B5DE5;">Med Ride</span></h1>
+        <a href="#features" class="btn btn-custom px-5 py-3 text-white mt-3 mt-sm-0" style="border-radius: 30px;">Get Started</a>
+      </div>
+      <!-- in mobile remove the clippath -->
+      <div class="col-md-8 h-100 clipped" style="min-height: 550px; background-image: url('cvr.jpg'); background-position: center; background-size: cover;">
+        <div class="container mt-5">
+          <div class="row justify-content-center slideIn">
+              <div class="col-lg-6 col-md-8 col-sm-10 text-center">
+                  <img id="image" src="logo1.png" alt="Cover Image" class="img-fluid">
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="container slideIn">
+      <div class="row">
+        <div class="col-md-8 offset-md-2 text-center mt-5">
+          <h1 class="mb-4">Why Trust Med Nex Care?</h1>
+          <p class="lead">Med Nex Care is dedicated to providing exceptional healthcare services tailored to your needs. Here are some compelling reasons why you can trust us:</p>
+          <ul class="list-group">
+            <li class="list-group-item">Expertise and Excellence</li>
+            <li class="list-group-item">Comprehensive Services</li>
+            <li class="list-group-item">State-of-the-Art Facilities</li>
+            <li class="list-group-item">Patient-Centered Care</li>
+            <li class="list-group-item">Convenience and Accessibility</li>
+            <li class="list-group-item">Commitment to Excellence</li>
+            <li class="list-group-item">Trusted Reputation</li>
+          </ul>
+          <p class="mt-4">Experience the difference with Med Nex Care.</p>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+    <footer class="bg-dark text-white py-4">
+      <div class="container">
+          <div class="row align-items-center">
+              <div class="col-md-6">
+                  <a class="navbar-brand" href="#">
+                    <img src="logo.png" alt="Brand Logo">
+                    <span class="navbar-brand-text">Med Nex Care</span>
+                  </a>
+              </div>
+              <div class="col-md-6">
+                  <div class="row">
+                      <div class="col-lg-4 col-md-6">
+                          <h5>Quick Links</h5>
+                          <ul class="list-unstyled">
+                              <li><a href="#hospital-rides">Hospital Rides</a></li>
+                              <li><a href="#doctor-appointments">Doctor Appointments</a></li>
+                              <li><a href="#pharmacy">Pharmacy</a></li>
+                              <li><a href="#offers">Offers</a></li>
+                          </ul>
+                      </div>
+                      <div class="col-lg-4 col-md-6">
+                          <h5>Connect with Us</h5>
+                          <ul class="list-unstyled">
+                              <li><a href="#">Facebook</a></li>
+                              <li><a href="#">Twitter</a></li>
+                              <li><a href="#">Instagram</a></li>
+                              <li><a href="#">LinkedIn</a></li>
+                          </ul>
+                      </div>
+                      <div class="col-lg-4 col-md-12">
+                          <h5>Contact Information</h5>
+                          <address>
+                              123 Main Street, City<br>
+                              State, ZIP<br>
+                              Phone: 123-456-7890<br>
+                              Email: info@medinexcare.com
+                          </address>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <div class="container-fluid text-center">
+          <hr class="bg-light">
+          <p class="mb-0">© 2024 MEDI NEX CARE. All rights reserved.</p>
+      </div>
+    </footer>
+    
+    
+    
+    <!-- Bootstrap JS (Optional) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+      // Array containing text and image data
+      const content = [
+        { text: "MedRide", image: "medRide.png" },
+        { text: "MedShop", image: "Patient.png" },
+        { text: "MedEasy", image: "medShoppe.png" }
+      ];
+      
+      let index = 0;
+      const textElement = document.getElementById('text');
+      const imageElement = document.getElementById('image');
+      
+      // Function to change text and image
+      function changeContent() {
+        textElement.textContent = content[index].text;
+        imageElement.src = content[index].image;
+        index = (index + 1) % content.length; // Loop back to the beginning
+      }
+      
+      // Change content every 3 seconds (adjust as needed)
+      setInterval(changeContent, 2000);
+    </script>
+  </body>
+</html>
